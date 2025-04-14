@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FoodExpress - Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('restaurant.jpg');
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+      background-color: #ff4d4d;
+      color: white;
+    }
+
+    /* Restaurant List */
+    .restaurant-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    /* Restaurant Cards */
+    .restaurant-card {
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      color: white;
+      position: relative;
+    }
+
+    .restaurant-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .restaurant-card * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .restaurant-card h2 {
+      margin: 20px 0 10px;
+    }
+
+    .restaurant-card p {
+      margin: 0 0 15px;
+      color: #ddd;
+    }
+
+    .restaurant-card a {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      background-color: #ff4d4d;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .restaurant-card a:hover {
+      background-color: #e64545;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+    <a href="#">Order Now</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to FoodExpress</h1>
+    <p>Select a restaurant to explore their menu</p>
+  </header>
+
+  <!-- Restaurant List -->
+  <div class="restaurant-list">
+    <div class="restaurant-card" style="background-image: url('restaurant1.jpg');">
+      <h2>Spice Hub</h2>
+      <p>⭐ 4.5 (1200 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant2.jpg');">
+      <h2>Burger Queen</h2>
+      <p>⭐ 4.2 (950 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant3.jpg');">
+      <h2>Pasta Fiesta</h2>
+      <p>⭐ 4.7 (800 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant4.jpg');">
+      <h2>Tandoori Treats</h2>
+      <p>⭐ 4.6 (1020 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant5.jpg');">
+      <h2>Grill House</h2>
+      <p>⭐ 4.4 (700 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant6.jpg');">
+      <h2>Sushi Central</h2>
+      <p>⭐ 4.8 (650 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant7.jpg');">
+      <h2>Noodle Nation</h2>
+      <p>⭐ 4.3 (780 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant8.jpg');">
+      <h2>Biryani Blast</h2>
+      <p>⭐ 4.6 (860 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant9.jpg');">
+      <h2>Pizza Planet</h2>
+      <p>⭐ 4.1 (910 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+
+    <div class="restaurant-card" style="background-image: url('restaurant10.jpg');">
+      <h2>Wrap It Up</h2>
+      <p>⭐ 4.0 (560 ratings)</p>
+      <a href="restaurant.html">View Menu</a>
+    </div>
+  </div>
+</body>
+</html>
