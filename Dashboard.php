@@ -26,6 +26,13 @@
       color: white;
       border-radius: 10px;
     }
+    .admin-header a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+      display: block;
+    }
     .admin-section {
       display: flex;
       gap: 20px;
@@ -80,6 +87,7 @@
     <div class="admin-header">
       <h1>Admin Dashboard</h1>
       <p>Manage Orders, Products, and More</p>
+      <a href="index.html">Back to Home</a> <!-- Link to Home Page -->
     </div>
 
     <div class="admin-section">
