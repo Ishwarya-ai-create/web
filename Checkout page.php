@@ -26,6 +26,13 @@
       color: white;
       border-radius: 10px;
     }
+    .checkout-header a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+      display: block;
+    }
     .checkout-form {
       display: flex;
       flex-direction: column;
@@ -78,6 +85,8 @@
     <div class="checkout-header">
       <h1>Checkout</h1>
       <p>Complete your purchase by choosing your payment method</p>
+      <!-- Link to Home Page -->
+      <a href="index.html">Back to Home</a> <!-- Add a link to the homepage -->
     </div>
 
     <form class="checkout-form" method="post" action="process_checkout.php">
