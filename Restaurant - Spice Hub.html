@@ -2,129 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Restaurant - Spice Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spice Hub - Menu</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('restaurant.jpg');
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-
-    header {
-      background: #ff4d4d;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .menu-container {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .menu-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .menu-item {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 280px;
-      text-align: center;
-    }
-
-    .menu-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .menu-item h3 {
-      margin-top: 10px;
-    }
-
-    .menu-item p {
-      margin: 5px 0;
-    }
-
-    .menu-item a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #ff4d4d;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .menu-item a:hover {
-      background-color: #e64545;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <h1>Spice Hub</h1>
+    <h1>Welcome to Spice Hub</h1>
     <p>Delicious Indian Cuisine</p>
   </header>
 
-  <div class="menu-container">
-    <div class="menu-items">
-      <!-- Menu Item 1 -->
-      <div class="menu-item">
-        <img src="spicehub1.jpg" alt="Chicken Curry">
-        <h3>Chicken Curry</h3>
-        <p>$12.99</p>
-        <a href="product.php?id=1">View Details</a>
+  <div class="restaurant-menu">
+    <div class="menu-item">
+      <div class="menu-card" style="background-image: url('spicehub1.jpg');">
+        <h2>Chicken Curry</h2>
+        <p>⭐ 4.5 (1200 ratings)</p>
+        <a href="product_chicken_curry.html">View Details</a>
       </div>
+    </div>
 
-      <!-- Menu Item 2 -->
-      <div class="menu-item">
-        <img src="spicehub2.jpg" alt="Paneer Tikka">
-        <h3>Paneer Tikka</h3>
-        <p>$10.49</p>
-        <a href="product.php?id=2">View Details</a>
+    <div class="menu-item">
+      <div class="menu-card" style="background-image: url('spicehub2.jpg');">
+        <h2>Paneer Tikka</h2>
+        <p>⭐ 4.7 (1500 ratings)</p>
+        <a href="product_paneer_tikka.html">View Details</a>
       </div>
+    </div>
 
-      <!-- Menu Item 3 -->
-      <div class="menu-item">
-        <img src="spicehub3.jpg" alt="Veg Biryani">
-        <h3>Veg Biryani</h3>
-        <p>$9.99</p>
-        <a href="product.php?id=3">View Details</a>
+    <div class="menu-item">
+      <div class="menu-card" style="background-image: url('spicehub3.jpg');">
+        <h2>Veg Biryani</h2>
+        <p>⭐ 4.2 (950 ratings)</p>
+        <a href="product_veg_biryani.html">View Details</a>
       </div>
+    </div>
 
-      <!-- Menu Item 4 -->
-      <div class="menu-item">
-        <img src="spicehub4.jpg" alt="Butter Naan">
-        <h3>Butter Naan</h3>
-        <p>$3.99</p>
-        <a href="product.php?id=4">View Details</a>
+    <div class="menu-item">
+      <div class="menu-card" style="background-image: url('spicehub4.jpg');">
+        <h2>Butter Naan</h2>
+        <p>⭐ 4.8 (800 ratings)</p>
+        <a href="product_butter_naan.html">View Details</a>
       </div>
+    </div>
 
-      <!-- Menu Item 5 -->
-      <div class="menu-item">
-        <img src="spicehub5.jpg" alt="Mango Lassi">
-        <h3>Mango Lassi</h3>
-        <p>$4.99</p>
-        <a href="product.php?id=5">View Details</a>
+    <div class="menu-item">
+      <div class="menu-card" style="background-image: url('spicehub5.jpg');">
+        <h2>Mango Lassi</h2>
+        <p>⭐ 4.9 (1300 ratings)</p>
+        <a href="product_mango_lassi.html">View Details</a>
       </div>
     </div>
   </div>
+
+  <footer>
+    <p>Spice Hub | Authentic Indian Cuisine | Contact Us</p>
+  </footer>
+
 </body>
 </html>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  header {
+    background: #ff4d4d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .restaurant-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .menu-item {
+    width: 300px;
+  }
+
+  .menu-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  .menu-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .menu-card p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .menu-card a {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .menu-card a:hover {
+    background-color: #e64545;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+</style>
