@@ -119,7 +119,8 @@
     </table>
 
     <div class="order-history-buttons">
-      <button onclick="location.href='index.php'">Continue Shopping</button>
+      <!-- Button to go back to the homepage -->
+      <button onclick="location.href='index.html'">Back to Home</button>
     </div>
   </div>
 </body>
