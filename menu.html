@@ -77,17 +77,17 @@
       margin: 0 0 10px;
     }
 
-    .menu-item a {
-      display: inline-block;
+    .menu-item button {
       padding: 10px 15px;
       background-color: #ff4d4d;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
       margin-bottom: 20px;
+      cursor: pointer;
     }
 
-    .menu-item a:hover {
+    .menu-item button:hover {
       background-color: #e64545;
     }
 
@@ -97,19 +97,18 @@
       color: white;
       text-align: center;
       padding: 20px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+
   <!-- Navbar -->
   <nav>
-    <a href="home.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="#">About Us</a>
     <a href="#">Contact</a>
-    <a href="#">Order Now</a>
+    <a href="cart.html">Cart</a>
   </nav>
 
   <!-- Header -->
@@ -125,7 +124,7 @@
       <h3>Spicy Chicken Wings</h3>
       <p>A perfect blend of heat and flavor with crispy chicken wings.</p>
       <p>Price: $9.99</p>
-      <a href="#">Add to Cart</a>
+      <button onclick="addToCart('Spicy Chicken Wings', 9.99, 'spicehub1.jpg')">Add to Cart</button>
     </div>
 
     <div class="menu-item">
@@ -133,7 +132,7 @@
       <h3>Paneer Tikka</h3>
       <p>Grilled paneer cubes with a tangy marinade.</p>
       <p>Price: $8.49</p>
-      <a href="#">Add to Cart</a>
+      <button onclick="addToCart('Paneer Tikka', 8.49, 'spicehub2.jpg')">Add to Cart</button>
     </div>
 
     <div class="menu-item">
@@ -141,7 +140,7 @@
       <h3>Veg Biryani</h3>
       <p>Fragrant rice mixed with seasonal vegetables and spices.</p>
       <p>Price: $11.99</p>
-      <a href="#">Add to Cart</a>
+      <button onclick="addToCart('Veg Biryani', 11.99, 'spicehub3.jpg')">Add to Cart</button>
     </div>
 
     <div class="menu-item">
@@ -149,7 +148,7 @@
       <h3>Chicken Tandoori</h3>
       <p>Smoked chicken marinated in yogurt and traditional spices.</p>
       <p>Price: $12.99</p>
-      <a href="#">Add to Cart</a>
+      <button onclick="addToCart('Chicken Tandoori', 12.99, 'spicehub4.jpg')">Add to Cart</button>
     </div>
 
     <div class="menu-item">
@@ -157,8 +156,28 @@
       <h3>Butter Naan</h3>
       <p>Soft and fluffy naan with a buttery finish.</p>
       <p>Price: $3.49</p>
-      <a href="#">Add to Cart</a>
+      <button onclick="addToCart('Butter Naan', 3.49, 'spicehub5.jpg')">Add to Cart</button>
     </div>
   </div>
+
+  <footer>
+    <p>&copy; 2025 FoodExpress. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    function addToCart(name, price, image) {
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, price, image, quantity: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} added to cart!`);
+    }
+  </script>
 </body>
 </html>
